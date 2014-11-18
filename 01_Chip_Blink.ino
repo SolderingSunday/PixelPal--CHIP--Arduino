@@ -19,12 +19,12 @@
 
 // Chip has 3 important pins
 // Ground (GND) -- plugged into to Arduino GND
-// Right Eye LED (D12) --> plugged into to Arduino D12
+// Right Eye LED (D10) --> plugged into to Arduino D10
 // Left Eye LED (D11) --> plugged into to Arduino D11
 //
 // We need to define Chip's eyes so we can use them in our code
 
-int rEye = 12; //define right eye as pin12 on the Arduino
+int rEye = 10; //define right eye as pin12 on the Arduino
 int lEye = 11; //define right eye as pin11 on the Arduino
 
 // Next we need to initialize the Arduino pins
