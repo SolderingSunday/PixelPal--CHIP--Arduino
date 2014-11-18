@@ -1,7 +1,7 @@
 /*
  This is an example Arduino sketch for Chip, a Pixel Pal learning kit
  
- Thank you to all our Kickstarter supporters who made Chip Possible
+ Thank you to all our Kickstarter supporters who made Chip Possible!
  
  Pick up your own Chip in the Soldering Sunday shop:
  http://http://solderingsunday.com/product-category/pixel-pals/
