@@ -6,7 +6,7 @@
  Pick up your own Chip in the Soldering Sunday shop:
  http://http://solderingsunday.com/product-category/pixel-pals/
  
- Soldering Sunday suports and invests time and resources in open source code,
+ Soldering Sunday supports and invests time and resources in open source code,
  please suport us by purchasing from solderingsunday.com
  
  BSD licence. All text must be included in any redistribution. Thank you.
