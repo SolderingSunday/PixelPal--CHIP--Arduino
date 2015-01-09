@@ -18,7 +18,8 @@
  Rev: 1.0
  
  Goal: LEDs do not dim the same way incadescent light bulbs dim, but we can makere them act very similiar
- We will use the PWM function on the LED pins to change the brightness of Chip's eyes.
+ We will use the PWM function on the LED pins to change the brightness of Chip's eyes. What we are really doing is turing the
+ LEDs on and OFF very fast so we don't see the flicker. 
 */
 
 // Chip has 3 important pins
