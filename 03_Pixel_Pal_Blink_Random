@@ -1,0 +1,64 @@
+/*
+ This is an example Arduino sketch for Pixel Pals learning kit
+ 
+ Thank you to all our Kickstarter supporters who made Chip Possible!
+ 
+ Pick up your own Pixel Pal in the Soldering Sunday shop:
+ http://http://solderingsunday.com/product-category/pixel-pals/
+ 
+ Soldering Sunday supports and invests time and resources in open source code,
+ please suport us by purchasing from solderingsunday.com
+ 
+ BSD licence. All text must be included in any redistribution. Thank you.
+ 
+ Created 2015-05-08
+ By: SolderingSunday.com & 648.ken@gmail.com
+ Rev: 1.0
+ https://github.com/SolderignSunday
+*/
+
+// Pixel Pals have 3 important pins
+// Ground (GND) -- plugged into to Arduino GND
+// Right Eye LED (D10) --> plugged into to Arduino D10
+// Left Eye LED (D11) --> plugged into to Arduino D11
+
+// We need to define the eyes so we can use them in our code
+int rEye = 10; //define right eye as pin12 on the Arduino
+int lEye = 11; //define right eye as pin11 on the Arduino
+
+long blinkTime;            // when to blink nexts (in ms)
+boolean eyesOpen = true;   // track if eyes open or closed
+             
+
+// Next we need to initialize the Arduino pins
+// setup() only runs once when you power or reset an Arduino
+void setup(){
+  pinMode(rEye, OUTPUT); //set right eye for output
+  pinMode(lEye, OUTPUT); //set left eye for output
+  blinkTime = millis() + 2000 + random(10000);  // set next blink time
+}
+
+
+//loop runs forever - this is our main code
+void loop(){
+  
+  long curTime = millis(); // get current time (ms since start)
+  
+  if (curTime > blinkTime){       // time to change status
+    if (eyesOpen){
+      eyesOpen = false;          // need to blink
+      // The duration of a blink is between 100-400ms according to the 
+      // Harvard Database of Useful Biological Numbers.
+      blinkTime = curTime + 100 + random(300); // length of blink
+    }
+    else{
+      eyesOpen = true;           // open eyes
+      // Generally, between each blink is an interval of 2–10 seconds; actual rates vary by individual.
+      blinkTime = curTime + 2000 + random(10000); // next blink time  
+    }
+  } 
+    
+  // turn eyes on or off, depending on eyesOpen variable
+  digitalWrite(rEye, eyesOpen);     
+  digitalWrite(lEye, eyesOpen); 
+}
